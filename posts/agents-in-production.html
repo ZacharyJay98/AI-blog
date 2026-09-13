@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everyone's Demo Works. Almost Nobody's Agent Survives Production. — Zach Rowell</title>
+<meta name="description" content="The gap between a slick agent demo and a system you can hand to a real business isn't the model.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-header">
+  <h1><a href="../index.html">Zach Rowell</a></h1>
+</header>
+
+<main>
+<a class="back-link" href="../index.html">&larr; All posts</a>
+
+<article class="post">
+  <h1>Everyone's Demo Works. Almost Nobody's Agent Survives Production.</h1>
+  <div class="post-meta">September 2026</div>
+
+  <p>Every agent demo follows the same arc. Someone types a request, the model reasons out loud, calls a tool, gets a clean response, and produces the right answer in under ten seconds. It looks like magic, because it is a magic trick — the input was chosen to work.</p>
+
+  <p>Then you put the same agent in front of a real business with real data, and the first thing that happens is someone types a request that's ambiguous, or a tool call returns a 500, or a downstream API rate-limits you mid-task, or the user changes their mind halfway through and expects the agent to notice. None of that shows up in a demo. All of it shows up in week one of production.</p>
+
+  <p>Building automation for small businesses, I've stopped thinking of the model as the hard part. The model is the easy 20%. The other 80% is the stuff that never makes it into a launch tweet:</p>
+
+  <ul>
+    <li><strong>Failure containment.</strong> What happens when a tool call fails — does the agent retry blindly, hallucinate a plausible-looking result, or surface the failure honestly? Most frameworks default to the worst of the three unless you explicitly design for the third.</li>
+    <li><strong>Idempotency.</strong> If the same task gets triggered twice — a webhook fires twice, a retry happens after a timeout that actually succeeded — does your agent send the same email twice, double-book the appointment, double-charge the invoice? This is the single most common production bug I see in agent systems, and it's invisible in every demo because demos don't retry.</li>
+    <li><strong>Knowing when to stop and ask.</strong> A good agent has an escalation path. A demo agent barrels forward with its best guess because "asking a clarifying question" doesn't make for a compelling fifteen-second clip.</li>
+    <li><strong>Observability.</strong> When something goes wrong three weeks after launch, can you actually see what the agent saw, what it decided, and why? If the answer is "check the logs" and the logs are a wall of raw model output, you don't have observability, you have a haystack.</li>
+  </ul>
+
+  <p>None of this is a knock on the models themselves — they've gotten remarkably good at the reasoning and tool-use part of the job. But "the model can do it" and "the system around the model can be trusted to run unattended" are two completely different claims, and the industry conversation mostly stays on the first one because it's the one that's easy to show off.</p>
+
+  <p>The teams shipping agents that actually stay running aren't the ones with the fanciest prompt. They're the ones who treated the agent like any other piece of production software: instrumented, tested against edge cases on purpose, with a clear answer for "what happens when this breaks at 2am and nobody's watching."</p>
+
+  <p>That's the unglamorous work. It's also the whole difference between a demo and a dependency.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p><a href="../index.html">&larr; Back to all posts</a></p>
+</footer>
+
+</div>
+</body>
+</html>

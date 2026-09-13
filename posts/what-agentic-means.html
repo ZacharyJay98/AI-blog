@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What "Agentic" Actually Means (And Why Most Products Aren't) — Zach Rowell</title>
+<meta name="description" content="The word got slapped on every roadmap in the industry this year. Most of what's labeled agentic is a chatbot with extra steps.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-header">
+  <h1><a href="../index.html">Zach Rowell</a></h1>
+</header>
+
+<main>
+<a class="back-link" href="../index.html">&larr; All posts</a>
+
+<article class="post">
+  <h1>What "Agentic" Actually Means (And Why Most Products Aren't)</h1>
+  <div class="post-meta">August 2026</div>
+
+  <p>"Agentic" became the most overused word in software this year. It's on landing pages for products that are, functionally, a chatbot with a slightly longer system prompt. If the definition keeps stretching to cover anything with an LLM call in it, the word stops telling you anything useful, which is a shame because the underlying idea is genuinely important.</p>
+
+  <p>Here's the line I actually use, and it's simpler than most of the marketing copy suggests: a system is agentic to the degree that it makes its own decisions about <em>what to do next</em>, based on the state of the world, without a human or a hardcoded script choosing the next step for it.</p>
+
+  <p>By that bar, most of what gets called agentic isn't:</p>
+
+  <ul>
+    <li><strong>A chatbot that calls one tool and returns the result</strong> isn't agentic. It's a function call with a language model as the router. Useful, but the "decision" is which of three intents matched, not a plan.</li>
+    <li><strong>A fixed multi-step workflow where an LLM fills in the blanks at each step</strong> isn't agentic either, even if it looks impressive strung together. The sequence of steps was decided by whoever wrote the workflow. The model is doing generation, not deciding the path.</li>
+    <li><strong>A system that plans a sequence of actions, executes them, observes the actual result, and revises the plan when reality doesn't match expectation</strong> — that's the real thing. The defining feature isn't the tool calls. It's the loop: act, observe, reassess, and the willingness to change course based on what actually happened instead of what was expected to happen.</li>
+  </ul>
+
+  <p>This distinction isn't pedantic, because it changes what you should actually expect from the system, and what you need to build around it. A fixed workflow with LLM steps is predictable and easy to test — you know the shape of every run in advance, which is exactly why most production systems should still be built this way whenever the task doesn't require real autonomy. A true agentic loop is more capable and more valuable for genuinely open-ended tasks, but it's also inherently less predictable, which means it needs the guardrails, escalation paths, and observability that a fixed workflow can mostly skip.</p>
+
+  <p>The failure mode I see most often is calling something agentic to sound more advanced, then being surprised when it needs the safety infrastructure that label implies and nobody built it. If you're going to let a system decide its own next move, you have to actually design for the fact that it might decide wrong — not just borrow the word because it's the one investors and prospects respond to this year.</p>
+
+  <p>Most tasks don't need a fully agentic system. They need a well-scoped workflow with a language model doing the parts language models are good at. That's not a lesser answer. It's usually the correct engineering call — and it's a lot easier to explain to a client than "trust the loop."</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p><a href="../index.html">&larr; Back to all posts</a></p>
+</footer>
+
+</div>
+</body>
+</html>
