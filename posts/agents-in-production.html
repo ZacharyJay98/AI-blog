@@ -25,7 +25,7 @@
 
   <p>Then you put the same agent in front of a real business with real data, and the first thing that happens is someone types a request that's ambiguous, or a tool call returns a 500, or a downstream API rate-limits you mid-task, or the user changes their mind halfway through and expects the agent to notice. None of that shows up in a demo. All of it shows up in week one of production.</p>
 
-  <p>Building automation for small businesses, I've stopped thinking of the model as the hard part. The model is the easy 20%. The other 80% is the stuff that never makes it into a launch tweet:</p>
+  <p>Every time I've built an agent past the toy-project stage, I've stopped thinking of the model as the hard part. The model is the easy 20%. The other 80% is the stuff that never makes it into a launch tweet:</p>
 
   <ul>
     <li><strong>Failure containment.</strong> What happens when a tool call fails — does the agent retry blindly, hallucinate a plausible-looking result, or surface the failure honestly? Most frameworks default to the worst of the three unless you explicitly design for the third.</li>

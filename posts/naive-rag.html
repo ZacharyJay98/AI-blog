@@ -23,7 +23,7 @@
 
   <p>Every few months, a wave of posts declares retrieval-augmented generation dead, usually right after a new model ships with a bigger context window. The argument is always some version of: "why bother chunking and embedding documents when you can just paste the whole thing into the prompt?"</p>
 
-  <p>For a narrow set of use cases, that's a fair point. For almost everything I actually build for clients — support systems working off a growing knowledge base, agents that need current pricing or inventory, anything where the source data changes daily — it isn't, and the people making the argument are usually comparing a bigger context window against the worst possible version of RAG.</p>
+  <p>For a narrow set of use cases, that's a fair point. For most of the systems I actually care about — support systems working off a growing knowledge base, agents that need current pricing or inventory, anything where the source data changes daily — it isn't, and the people making the argument are usually comparing a bigger context window against the worst possible version of RAG.</p>
 
   <p>Because there is a version of RAG that deserves to die. It's the one that got built in a weekend: split every document into fixed 500-token chunks regardless of what's actually in them, embed with an out-of-the-box model, retrieve the top three by cosine similarity, staple them into a prompt, done. It technically works on the happy-path demo query and falls apart the moment a real question needs information that got split across two chunks, or phrased in words that don't overlap semantically with the source text.</p>
 
