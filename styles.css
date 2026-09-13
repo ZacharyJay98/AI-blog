@@ -137,10 +137,8 @@ header.site-header{
 }
 .hero h1 em{
   font-style: normal;
-  background: linear-gradient(90deg, var(--blue-bright), var(--blue));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--blue-bright);
+  text-shadow: 0 0 22px rgba(111,208,255,0.45);
 }
 
 .hero p.lede{
@@ -178,13 +176,12 @@ header.site-header{
 .hero-art{ position: relative; height: 190px; margin-top: 6px; }
 .hero-art svg{ width: 100%; height: 100%; }
 .arc-draw{
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  animation: draw 2.2s ease forwards;
+  stroke-dasharray: 10 16;
+  animation: flow 5s linear infinite;
 }
-.arc-draw.d2{ animation-delay: .15s; }
-.arc-draw.d3{ animation-delay: .3s; }
-@keyframes draw{ to{ stroke-dashoffset: 0; } }
+.arc-draw.d2{ animation-duration: 6.5s; animation-direction: reverse; }
+.arc-draw.d3{ animation-duration: 8s; }
+@keyframes flow{ to{ stroke-dashoffset: -520; } }
 .node{ animation: pulse 2.6s ease-in-out infinite; }
 .node.n2{ animation-delay: .5s; }
 .node.n3{ animation-delay: 1s; }
