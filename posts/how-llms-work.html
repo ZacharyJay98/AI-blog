@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Large Language Models Actually Work, No Math Required | Zach Rowell</title>
+<meta name="description" content="Everyone uses ChatGPT or Claude. Almost nobody can explain what's actually happening under the hood. Here's the honest version, in plain English.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navwrap">
+    <a href="../index.html" class="brand">ZACH ROWELL <span>NOTES ON AI</span></a>
+  </nav>
+</header>
+
+<div class="wrap">
+<main>
+<a class="back-link" href="../index.html">&larr; All posts</a>
+
+<article class="post">
+  <h1>How Large Language Models Actually Work, No Math Required</h1>
+  <div class="post-meta">September 2026 &middot; Explained Simply</div>
+
+  <p>Tens of millions of people use ChatGPT, Claude, or something like them every single day. Ask most of those people what's actually happening when they type a question and get an answer back, and you'll get some version of "it's smart" or "it thinks." Neither is really true, and you don't need a computer science degree to understand what's actually going on. It's genuinely one of the more satisfying "aha" moments in tech once someone explains it plainly.</p>
+
+  <h2>It's autocomplete, taken to an extreme</h2>
+
+  <p>You already know the core mechanic. It's the same thing your phone's keyboard does when it suggests the next word as you type, just wildly more sophisticated. A large language model's entire job, at the most basic level, is to look at all the text so far and predict what word (technically a smaller chunk called a token) is most likely to come next. Then it does that again for the following word. And again. One prediction at a time, it writes an entire answer.</p>
+
+  <p>That sounds too simple to explain something that can write code, summarize a contract, or hold a coherent conversation. The trick is that "predicting the next word well" turns out to be a much deeper problem than it sounds like, and getting really good at it requires the model to pick up an enormous amount of structure about how language, facts, and reasoning fit together.</p>
+
+  <h2>How it learned to do that</h2>
+
+  <p>During training, the model is shown a staggering amount of text, a meaningful chunk of the internet, books, and other written material, and repeatedly given the same task: look at a piece of text, try to predict the next word, then get corrected if it guessed wrong. It does this billions of times. Each time it's wrong, tiny internal adjustments (its "parameters," which you can think of as an enormous number of dials) get nudged slightly, so it does a little better next time.</p>
+
+  <p>Nothing in that process looks anything like memorizing a fact sheet. The model isn't storing "Paris is the capital of France" the way a database stores a row. It's adjusting billions of dials until predicting the word after "The capital of France is" reliably produces "Paris," along with millions of other patterns like it, layered on top of each other. Facts, grammar, tone, and reasoning steps all get absorbed as byproducts of getting extremely good at the one task it was actually trained on: guess the next word.</p>
+
+  <h2>Why it pays attention to the right things</h2>
+
+  <p>A sentence like "the trophy didn't fit in the suitcase because it was too big" requires figuring out what "it" refers to, which depends on words far earlier in the sentence. Models handle this with a mechanism usually called attention: for every word it's about to predict, it weighs how relevant every earlier word is, and leans more heavily on the ones that actually matter. It's a rough analogy, but it's a lot like how you naturally focus on the relevant part of a paragraph instead of treating every word as equally important. That mechanism, running across huge amounts of text at once, is most of what separates a modern model from a much dumber autocomplete.</p>
+
+  <h2>Why it sometimes sounds confident and wrong</h2>
+
+  <p>This part matters more than any of the technical detail. The model was never trained to know when it doesn't know something. It was trained to produce plausible-sounding next words. Most of the time, "plausible" and "true" line up, because it learned from a huge amount of accurate text. But when they don't line up, nothing inside the system raises a flag, because there was never a flag to raise. It will generate a wrong answer with exactly the same fluent confidence as a right one. That's what people mean by hallucination, and it's not a bug that will fully disappear with a better model. It's a direct consequence of what the system is actually optimized to do.</p>
+
+  <p>None of this makes the underlying achievement less impressive. Getting shockingly good at "predict the next word" turns out to require something that behaves a lot like understanding, even though nothing in the mechanism resembles a mind thinking things over. But knowing that it's fundamentally a very sophisticated prediction engine, not an oracle, changes how you should use it. Trust it for drafting, summarizing, and exploring ideas. Verify it before you trust it for anything where being wrong actually costs you something.</p>
+</article>
+</main>
+</div>
+
+<footer class="site-footer">
+  <div class="glow-orb"></div>
+  <div class="wrap">
+    <div><a href="../index.html">&larr; Back to all posts</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

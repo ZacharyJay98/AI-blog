@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<div class="wrap">
 
 <header class="site-header">
-  <h1><a href="../index.html">Zach Rowell</a></h1>
+  <nav class="navwrap">
+    <a href="../index.html" class="brand">ZACH ROWELL <span>NOTES ON AI</span></a>
+  </nav>
 </header>
 
+<div class="wrap">
 <main>
 <a class="back-link" href="../index.html">&larr; All posts</a>
 
@@ -41,11 +43,14 @@
   <p>Bigger context windows are a genuine tool, and for some workloads they're the right one. But "the context window got bigger" and "you no longer need a real retrieval strategy" are different claims, and conflating them is how you end up rebuilding the same broken system twice: once with embeddings, once by just paying more tokens for the privilege of the same missed answer.</p>
 </article>
 </main>
+</div>
 
 <footer class="site-footer">
-  <p><a href="../index.html">&larr; Back to all posts</a></p>
+  <div class="glow-orb"></div>
+  <div class="wrap">
+    <div><a href="../index.html">&larr; Back to all posts</a></div>
+  </div>
 </footer>
 
-</div>
 </body>
 </html>

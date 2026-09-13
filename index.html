@@ -8,64 +8,112 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
 
 <header class="site-header">
-  <h1><a href="index.html">Zach Rowell</a></h1>
-  <p class="tagline">Notes on building with AI, and where the industry hype outruns the tech.</p>
-  <p class="bio">I spend a lot of my free time building with LLMs and agent frameworks: side projects, experiments, things that break in interesting ways. This is where I write down what actually works, what breaks in production, and what I think is overrated this month.</p>
-  <div class="links">
-    <a href="https://github.com/zacharyjay98" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
+  <nav class="navwrap">
+    <a href="index.html" class="brand">ZACH ROWELL <span>NOTES ON AI</span></a>
+    <div class="navlinks">
+      <a href="https://github.com/zacharyjay98" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
 </header>
 
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="kicker-line"><span class="dot"></span> Explaining AI, one honest post at a time</div>
+      <h1>Thinking in <em>public</em>.</h1>
+      <p class="lede">I spend a lot of my free time building with LLMs and agent frameworks: side projects, experiments, things that break in interesting ways. This is where I write down what actually works, what breaks in production, and what I think is overrated this month.</p>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 500 200" fill="none" preserveAspectRatio="xMidYMid meet">
+        <path class="arc-draw" d="M10 150 C 120 40, 300 40, 490 130" stroke="#1c4a6e" stroke-width="2" stroke-linecap="round"/>
+        <path class="arc-draw d2" d="M10 100 C 140 170, 320 10, 490 80" stroke="#2f8fdc" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="arc-draw d3" d="M10 60 C 150 120, 330 120, 490 40" stroke="#6fd0ff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+        <g stroke="#3a4a58" stroke-width="1.5">
+          <line x1="150" y1="80" x2="220" y2="130"/>
+          <line x1="220" y1="130" x2="300" y2="90"/>
+          <line x1="220" y1="130" x2="260" y2="170"/>
+          <line x1="300" y1="90" x2="370" y2="120"/>
+        </g>
+        <circle class="node" cx="150" cy="80" r="5" fill="#6fd0ff"/>
+        <circle class="node n2" cx="220" cy="130" r="6" fill="#2f8fdc"/>
+        <circle class="node n3" cx="300" cy="90" r="5" fill="#6fd0ff"/>
+        <circle class="node" cx="260" cy="170" r="4" fill="#3a4a58"/>
+        <circle class="node n2" cx="370" cy="120" r="4" fill="#3a4a58"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="signal"></div>
+
+<div class="wrap">
 <main>
   <ul class="post-list">
 
     <li>
-      <div class="post-meta">Sep 2026 · Industry</div>
+      <div class="post-meta">Sep 2026 &middot; Explained Simply</div>
+      <h2><a href="posts/how-llms-work.html">How Large Language Models Actually Work, No Math Required</a></h2>
+      <p class="post-excerpt">Everyone uses one. Almost nobody can explain what's actually happening under the hood. Here's the honest version, in plain English.</p>
+    </li>
+
+    <li>
+      <div class="post-meta">Sep 2026 &middot; Explained Simply</div>
+      <h2><a href="posts/ai-news-plain-english.html">What's Actually Changed in AI Recently, In Plain English</a></h2>
+      <p class="post-excerpt">Reasoning, agents, multimodal, cheaper and faster. Here's what those words actually mean, without the hype.</p>
+    </li>
+
+    <li>
+      <div class="post-meta">Sep 2026 &middot; Industry</div>
       <h2><a href="posts/ai-wrapper-saas.html">Most New SaaS Is Just an API Key Wearing a Landing Page</a></h2>
       <p class="post-excerpt">A huge share of new AI products are a thin form on top of a single call to someone else's model. That's fine as a weekend project. It's a bad long-term bet as a business.</p>
     </li>
 
     <li>
-      <div class="post-meta">Sep 2026 · Building</div>
+      <div class="post-meta">Sep 2026 &middot; Building</div>
       <h2><a href="posts/agents-in-production.html">Everyone's Demo Works. Almost Nobody's Agent Survives Production.</a></h2>
       <p class="post-excerpt">The gap between a slick agent demo and a system you can hand to a real business isn't the model. It's everything you have to build around it that nobody shows on stage.</p>
     </li>
 
     <li>
-      <div class="post-meta">Sep 2026 · Industry</div>
+      <div class="post-meta">Sep 2026 &middot; Industry</div>
       <h2><a href="posts/context-window-arms-race.html">The Context Window Arms Race Is Solving the Wrong Problem</a></h2>
       <p class="post-excerpt">A bigger context window is not the same thing as a model that knows what to pay attention to. Here's why "just stuff it all in" keeps quietly failing.</p>
     </li>
 
     <li>
-      <div class="post-meta">Aug 2026 · Building</div>
+      <div class="post-meta">Aug 2026 &middot; Building</div>
       <h2><a href="posts/naive-rag.html">RAG Isn't Dead. Naive RAG Is.</a></h2>
       <p class="post-excerpt">Every few months someone declares retrieval-augmented generation dead. What's actually dying is the version everyone built in a weekend and never touched again.</p>
     </li>
 
     <li>
-      <div class="post-meta">Aug 2026 · Industry</div>
+      <div class="post-meta">Aug 2026 &middot; Industry</div>
       <h2><a href="posts/what-agentic-means.html">What "Agentic" Actually Means (And Why Most Products Aren't)</a></h2>
       <p class="post-excerpt">The word got slapped on every roadmap in the industry this year. Most of what's labeled "agentic" is a chatbot with extra steps. Here's the actual line.</p>
     </li>
 
     <li>
-      <div class="post-meta">Jul 2026 · Building</div>
+      <div class="post-meta">Jul 2026 &middot; Building</div>
       <h2><a href="posts/boring-part-of-automation.html">The Boring Part of AI Automation Is Where All the Value Is</a></h2>
       <p class="post-excerpt">Nobody gets excited about error handling, logging, or what happens when an API times out at 2am. That's also the entire difference between a toy and a tool a business can depend on.</p>
     </li>
 
   </ul>
 </main>
+</div>
 
 <footer class="site-footer">
-  <p>Zach Rowell. Opinions are my own and will probably look wrong in six months.</p>
+  <div class="glow-orb"></div>
+  <div class="wrap">
+    <div>Zach Rowell. Opinions are my own and will probably look wrong in six months.</div>
+    <div><a href="https://github.com/zacharyjay98" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
 </footer>
 
-</div>
 </body>
 </html>
