@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Most New SaaS Is Just an API Key Wearing a Landing Page | Zach Rowell</title>
+<meta name="description" content="A huge share of new AI products are a thin form on top of a single call to someone else's model. That's not always a problem, but most of them are pricing it like one.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-header">
+  <h1><a href="../index.html">Zach Rowell</a></h1>
+</header>
+
+<main>
+<a class="back-link" href="../index.html">&larr; All posts</a>
+
+<article class="post">
+  <h1>Most New SaaS Is Just an API Key Wearing a Landing Page</h1>
+  <div class="post-meta">September 2026</div>
+
+  <p>Pull up ten "AI powered" products launched this month and open the network tab on a handful of them. A striking number reduce to the same shape: your input goes into a text box, gets forwarded almost unmodified to a foundation model's API, and the response gets styled and shown back to you. Strip the landing page and the pricing tier and what's left is a single API key with a UI in front of it.</p>
+
+  <p>That's not a conspiracy theory, it's just the obvious outcome of the last few years. The hard part of building an AI product used to be the AI part: training a model, or at least fine-tuning one, or building the infrastructure to serve it at scale. Now that part is a monthly subscription and a few lines of code. So the barrier to shipping something that looks like a serious AI company collapsed, and a lot of companies rushed through the gap that opened up.</p>
+
+  <p>The tell is usually the same across all of them. Ask what happens when the underlying model has a bad day, hallucinates, or gets deprecated, and there's no good answer, because the product never built anything of its own to fall back on. Ask what the product does that you couldn't do yourself with the same prompt pasted into a general-purpose assistant, and the honest answer is often "the prompt is good and the UI is nice." Those are real things. They are not a moat.</p>
+
+  <blockquote>If your entire product is a prompt and a pretty form, your competition is anyone who can read your prompt.</blockquote>
+
+  <p>None of this means wrapper products are worthless. Plenty of real problems get solved by a well-designed interface in front of a general model, and packaging, distribution, and a good workflow are legitimate value even when the underlying intelligence is rented. The mistake is pretending the wrapper is the hard part, charging like it's proprietary technology, and being surprised when a competitor ships the same thing in a weekend with a slightly better prompt and slightly nicer buttons.</p>
+
+  <p>The products that actually hold up tend to add something the raw API call can't give you on its own:</p>
+
+  <ul>
+    <li><strong>Proprietary data the model never saw.</strong> Retrieval over something genuinely valuable and non-public, not a wrapper around public documentation anyone could point the model at.</li>
+    <li><strong>A workflow, not a single call.</strong> Multiple steps, state, validation, and error handling that turn one model call into a system that reliably finishes a real task end to end.</li>
+    <li><strong>Domain-specific evaluation.</strong> Actually knowing when the model's output is wrong for your specific use case, and catching it, instead of shipping whatever came back.</li>
+    <li><strong>Switching cost that isn't the prompt.</strong> Value that lives in accumulated user data, integrations, or history, so the product would still matter even if the underlying model provider changed tomorrow.</li>
+  </ul>
+
+  <p>If you strip those away and what remains is a system prompt and a subscription fee, you haven't built a product, you've built a very expensive way to call an API you could call directly. That's fine as a weekend project. It's a bad long-term bet as a business, because the thing standing between you and a free alternative is a prompt that anyone with ten minutes and the same model can copy.</p>
+
+  <p>The interesting AI companies right now aren't the ones with the best prompt. They're the ones where you could hand a competitor the entire prompt and they'd still be years behind, because the actual value was never sitting in the text box.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p><a href="../index.html">&larr; Back to all posts</a></p>
+</footer>
+
+</div>
+</body>
+</html>

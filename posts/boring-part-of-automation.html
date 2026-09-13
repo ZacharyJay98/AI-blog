@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Boring Part of AI Automation Is Where All the Value Is — Zach Rowell</title>
+<title>The Boring Part of AI Automation Is Where All the Value Is | Zach Rowell</title>
 <meta name="description" content="Nobody gets excited about error handling and logging. That's also the entire difference between a toy and a tool a business can depend on.">
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -21,24 +21,24 @@
   <h1>The Boring Part of AI Automation Is Where All the Value Is</h1>
   <div class="post-meta">July 2026</div>
 
-  <p>Whenever I pitch myself on automating something with AI, the exciting part lasts about five minutes. "It can read the incoming message, figure out what's being asked, and draft a response" — that part is fun to build and fun to demo. The part that actually determines whether the thing is still running six months later is everything that comes after, and it's the part I have to remind myself to care about because it isn't interesting.</p>
+  <p>Whenever I pitch myself on automating something with AI, the exciting part lasts about five minutes. "It can read the incoming message, figure out what's being asked, and draft a response": that part is fun to build and fun to demo. The part that actually determines whether the thing is still running six months later is everything that comes after, and it's the part I have to remind myself to care about because it isn't interesting.</p>
 
-  <p>What happens when the email is in a format the parser doesn't expect? What happens when the CRM API is down for four minutes during business hours? What happens when the automation runs twice because a webhook retried? Who finds out when it silently stops working, and how long before they find out — an hour, or a customer complaint three weeks later?</p>
+  <p>What happens when the email is in a format the parser doesn't expect? What happens when the CRM API is down for four minutes during business hours? What happens when the automation runs twice because a webhook retried? Who finds out when it silently stops working, and how long before they find out: an hour, or a customer complaint three weeks later?</p>
 
-  <p>None of that is a language model problem. It's the same set of concerns that has always separated a working piece of software from a fragile one, and AI hasn't changed that — it's just changed how easy it is to build something that looks finished before any of those questions have been answered.</p>
+  <p>None of that is a language model problem. It's the same set of concerns that has always separated a working piece of software from a fragile one, and AI hasn't changed that. It's just changed how easy it is to build something that looks finished before any of those questions have been answered.</p>
 
   <p>That ease is actually the trap. A few years ago, building a business automation meant enough upfront engineering effort that you were more or less forced to think about failure modes before you shipped, because getting to a working prototype was hard enough that you'd already touched most of the system. Now you can get a demo-quality automation running in an afternoon, which is genuinely great, but it means the discipline of asking "what happens when this breaks" has to be a deliberate step instead of something you back into along the way.</p>
 
   <p>The automations I've built that are still running unattended a year later all share the same unglamorous traits:</p>
 
   <ul>
-    <li>Every external call has a defined failure behavior, not a default one — timeout, retry with backoff, or fail loudly, chosen on purpose rather than whatever the library does out of the box.</li>
+    <li>Every external call has a defined failure behavior, not a default one: timeout, retry with backoff, or fail loudly, chosen on purpose rather than whatever the library does out of the box.</li>
     <li>Every action that changes something in the real world (sends an email, updates a record, books a slot) is safe to run twice.</li>
-    <li>There's a place a human actually looks — not a log file nobody opens, an actual notification — when the system can't confidently complete a task on its own.</li>
+    <li>There's a place a human actually looks (not a log file nobody opens, an actual notification) when the system can't confidently complete a task on its own.</li>
     <li>Someone reviewed what the system does with a genuinely weird input before a customer did.</li>
   </ul>
 
-  <p>None of this is a pitch against moving fast — moving fast to a working prototype is exactly the right instinct. It's a pitch against confusing "the demo worked" with "this is done." The gap between those two is almost entirely the boring stuff, and for anything you actually intend to leave running unattended, the boring stuff is the actual product.</p>
+  <p>None of this is a pitch against moving fast. Moving fast to a working prototype is exactly the right instinct. It's a pitch against confusing "the demo worked" with "this is done." The gap between those two is almost entirely the boring stuff, and for anything you actually intend to leave running unattended, the boring stuff is the actual product.</p>
 </article>
 </main>
 

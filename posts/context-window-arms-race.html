@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Context Window Arms Race Is Solving the Wrong Problem — Zach Rowell</title>
+<title>The Context Window Arms Race Is Solving the Wrong Problem | Zach Rowell</title>
 <meta name="description" content="A bigger context window is not the same thing as a model that knows what to pay attention to.">
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -21,21 +21,21 @@
   <h1>The Context Window Arms Race Is Solving the Wrong Problem</h1>
   <div class="post-meta">September 2026</div>
 
-  <p>Every model release cycle now comes with a bigger number attached to it — bigger context window, more tokens, "now reads your entire codebase / entire case file / entire year of emails in one shot." It's an easy headline, because it's a single number that goes up, and bigger numbers read as progress.</p>
+  <p>Every model release cycle now comes with a bigger number attached to it: bigger context window, more tokens, "now reads your entire codebase / entire case file / entire year of emails in one shot." It's an easy headline, because it's a single number that goes up, and bigger numbers read as progress.</p>
 
   <p>But a longer context window solves a narrow problem: can the model technically ingest this much text. It does not solve the problem that actually breaks most real applications, which is whether the model reliably notices and uses the one relevant fact buried in the middle of everything else you gave it.</p>
 
-  <p>This is well-documented at this point and anyone building with these models has felt it directly: performance on "find the needle" tasks degrades in the middle of long contexts, even when the model would answer correctly if that same fact were given alone. Dumping more tokens in doesn't fix this — it makes the middle bigger.</p>
+  <p>This is well-documented at this point and anyone building with these models has felt it directly: performance on "find the needle" tasks degrades in the middle of long contexts, even when the model would answer correctly if that same fact were given alone. Dumping more tokens in doesn't fix this. It makes the middle bigger.</p>
 
   <p>So what happens in practice is that teams pour their entire knowledge base into the context window because the window technically allows it, get worse and less predictable answers than a well-scoped retrieval system would give them, and conclude the model "just isn't good enough yet." Usually the model is fine. The problem is that "can hold" and "can use well" got treated as the same claim.</p>
 
   <blockquote>A bigger window changes what's possible. It doesn't change what's wise.</blockquote>
 
-  <p>The actual unlock isn't context length, it's context <em>curation</em> — being deliberate about what the model sees for a given task, in what order, with what signal about relevance. That's less flashy than "1 million tokens," because it's an engineering discipline instead of a spec sheet number, and it means someone has to make judgment calls about what matters instead of just shipping everything.</p>
+  <p>The actual unlock isn't context length, it's context <em>curation</em>: being deliberate about what the model sees for a given task, in what order, with what signal about relevance. That's less flashy than "1 million tokens," because it's an engineering discipline instead of a spec sheet number, and it means someone has to make judgment calls about what matters instead of just shipping everything.</p>
 
   <p>I'd rather work with a model that has a modest context window and a well-designed retrieval layer in front of it than one with a huge window and a "just throw it all in" pipeline behind it. The first one is a system someone thought about. The second one is a bet that scale quietly fixes judgment. It doesn't.</p>
 
-  <p>None of this means long context is useless — it's genuinely valuable for tasks that are actually about synthesis across a large body of text. The mistake is treating window size as a proxy for how well-built the application is. It's a capability, not a strategy.</p>
+  <p>None of this means long context is useless. It's genuinely valuable for tasks that are actually about synthesis across a large body of text. The mistake is treating window size as a proxy for how well-built the application is. It's a capability, not a strategy.</p>
 </article>
 </main>
 
